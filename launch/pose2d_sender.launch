@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="pose2d_sender" type="pose2d_sender" name="pose2d_sender" output="screen">
+    <param name="node_name" value="pose2d_sender" />
+  </node>
+</launch>
