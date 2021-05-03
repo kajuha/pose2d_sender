@@ -26,9 +26,9 @@ void getPose2d() {
 
   while (ros::ok())
   {
-    printf("x y theta : ");
+    // printf("x y theta : ");
     
-    scanf("%lf %lf %lf", &x_, &y_, &theta_);
+    // scanf("%lf %lf %lf", &x_, &y_, &theta_);
 
     // ros::spinOnce();
 
@@ -64,13 +64,16 @@ int main(int argc, char* argv[])
     if ( time_diff > STEP_TIME ) {
         time_pre = time_cur;
     }
-
+    printf("x y theta : ");
+    
+    double x_, y_, theta_;
+    scanf("%lf %lf %lf", &x_, &y_, &theta_);
     pose2d.x = x_;
     pose2d.y = y_;
     pose2d.theta = theta_;
     pose2d_pub.publish(pose2d);
 
-    // ros::spinOnce();
+    ros::spinOnce();
 
     r.sleep();
   }
