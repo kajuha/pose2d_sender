@@ -28,7 +28,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(  
   LIBRARIES pose2d_sender
   CATKIN_DEPENDS roscpp std_msgs sensor_msgs tf
-  DEPENDS system_lib
+#   DEPENDS system_lib
 )
 
 ################################################################################
